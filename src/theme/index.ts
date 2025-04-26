@@ -79,7 +79,6 @@ export const theme = createTheme({
       md: parseInt(breakpoints.md),
       lg: parseInt(breakpoints.lg),
       xl: parseInt(breakpoints.xl),
-      xxl: parseInt(breakpoints.xxl),
     },
   },
   shadows: [
@@ -89,7 +88,7 @@ export const theme = createTheme({
     shadows.lg,
     shadows.xl,
     ...Array(20).fill(shadows.xl),
-  ],
+  ] as any,
   components: {
     MuiButton: {
       styleOverrides: {

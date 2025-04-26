@@ -11,7 +11,7 @@ export const useAuth = () => {
     throw new Error('useAuth must be used within an AuthProvider');
   }
 
-  const { user, isAuthenticated, isLoading, error, login, logout, register } = context;
+  const { user, isAuthenticated, login, logout, refreshToken } = context;
 
   const handleLogout = async () => {
     await logout();
@@ -21,10 +21,8 @@ export const useAuth = () => {
   return {
     user,
     isAuthenticated,
-    isLoading,
-    error,
     login,
     logout: handleLogout,
-    register,
+    refreshToken,
   };
 }; 

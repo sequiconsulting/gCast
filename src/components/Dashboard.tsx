@@ -1,9 +1,7 @@
-import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useEffect } from 'react';
 
 const Dashboard = () => {
-  const navigate = useNavigate();
   const { user, logout } = useAuth();
 
   // Add security headers

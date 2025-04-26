@@ -1,16 +1,9 @@
-import { useAuth } from '../contexts/AuthContext';
-
 // Google API scopes
 export const GOOGLE_SCOPES = [
   'https://www.googleapis.com/auth/contacts.readonly',
   'https://www.googleapis.com/auth/drive.file',
   'https://www.googleapis.com/auth/gmail.send'
 ];
-
-interface GoogleApiError extends Error {
-  status?: number;
-  code?: string;
-}
 
 export const googleApi = {
   async getContacts() {

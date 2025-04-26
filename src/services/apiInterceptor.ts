@@ -1,5 +1,3 @@
-import { useAuth } from '../contexts/AuthContext';
-
 class ApiInterceptor {
   private static instance: ApiInterceptor;
   private isRefreshing = false;
